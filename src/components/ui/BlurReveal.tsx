@@ -29,15 +29,12 @@ export default function BlurReveal({
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (immediate) {
-      setIsRevealed(true);
-      return;
-    }
+    if (immediate) return;
 
     if (typeof window === "undefined") return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsRevealed(true);
+      requestAnimationFrame(() => setIsRevealed(true));
       return;
     }
 
@@ -45,14 +42,14 @@ export default function BlurReveal({
     if (!el) return;
 
     if (typeof IntersectionObserver === "undefined") {
-      setIsRevealed(true);
+      requestAnimationFrame(() => setIsRevealed(true));
       return;
     }
 
     // Check if element is already within viewport
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setIsRevealed(true);
+      requestAnimationFrame(() => setIsRevealed(true));
       return;
     }
 

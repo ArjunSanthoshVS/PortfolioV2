@@ -4401,3 +4401,61 @@ a {
   filter: blur(28px);
 }
 
+/* =========================================================================
+   404 NOT FOUND PAGE
+   Single-screen, non-scrollable, human-friendly layout
+   ========================================================================= */
+.not-found-viewport {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary, #FAFAF7);
+  padding: clamp(20px, 4vw, 40px);
+  box-sizing: border-box;
+}
+
+.not-found-content {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.not-found-heading {
+  font-family: var(--font-primary);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-primary, #1A1A1A);
+  margin-bottom: clamp(12px, 2vh, 16px);
+}
+
+.not-found-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.8vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--text-muted, #6B7280);
+  max-width: 440px;
+  margin-bottom: clamp(24px, 4vh, 32px);
+}
+
+.not-found-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+

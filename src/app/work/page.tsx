@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { PROJECTS } from "@/data/portfolioData";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui";
 
 export default function WorkPage() {

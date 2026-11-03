@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import {
-  ArrowLeft,
   ArrowUpRight,
   Mail,
   Briefcase,

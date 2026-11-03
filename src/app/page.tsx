@@ -8,7 +8,7 @@ import {
   User,
   Mail,
 } from "lucide-react";
-import { Button, TextLink } from "@/components/ui";
+import { Button } from "@/components/ui";
 
 export default function Home() {
   const [activeNav, setActiveNav] = useState<string>("work");

@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import {
   ArrowLeft,
   ArrowRight,
-  ArrowUpRight,
   CheckCircle2,
   Info,
   Lock,

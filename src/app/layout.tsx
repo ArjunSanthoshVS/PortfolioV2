@@ -70,6 +70,9 @@ export const metadata: Metadata = {
     "Bengaluru",
   ],
   authors: [{ name: PERSONAL_DETAILS.name }],
+  icons: {
+    icon: "data:,",
+  },
   openGraph: {
     title: `${PERSONAL_DETAILS.name} — ${PERSONAL_DETAILS.title}`,
     description:

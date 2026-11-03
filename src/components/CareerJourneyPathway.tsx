@@ -128,7 +128,9 @@ export default function CareerJourneyPathway({
   // Hardware-accelerated IntersectionObserver for instant visibility
   useEffect(() => {
     if (isReducedMotion) {
-      setReachedStates(experiences.map(() => true));
+      requestAnimationFrame(() => {
+        setReachedStates(experiences.map(() => true));
+      });
       return;
     }
 
@@ -181,8 +183,11 @@ export default function CareerJourneyPathway({
       });
     };
 
-    // Initial check on mount
-    checkScrollProgress();
+    // Initial check on mount scheduled via requestAnimationFrame
+    rafId = window.requestAnimationFrame(() => {
+      checkScrollProgress();
+      rafId = null;
+    });
 
     scrollContainer.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
